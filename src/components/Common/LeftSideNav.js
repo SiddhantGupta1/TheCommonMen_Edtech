@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './LeftSideNav.css';
 import {Link} from 'react-router-dom';
 import HomeIcon from '../../assets/HomeIcon.svg';
@@ -17,6 +17,9 @@ import UserIcon from '../../assets/UserIcon.svg'
 
 const LeftSideNav = () => {
 
+  const path = window.location.pathname
+  const [houses, setHouses] = useState(false)
+  const [projects, setProjects] = useState(false)
 
   return (
     <div className='LeftSideNav'>
@@ -24,27 +27,29 @@ const LeftSideNav = () => {
       <hr />
       
       <div style={{width: '85%', display: 'flex', flexDirection: 'column', marginTop: '1rem'}} >
-        <Link to="#" className='center Links2' > <img alt="" src={HomeIcon} />&nbsp; Dashboard</Link>
-        <Link to="#" className='center Links1' > <img alt="" src={DiscoverIcon} />&nbsp; Discover</Link>
-        <Link to="#" className='center Links1' > <img alt="" src={ChatsIconGrey} />&nbsp; Chats</Link>
+        <Link to="/dashboard" className={path === '/dashboard' ? 'Links2' : 'Links1'} > <img alt="" src={HomeIcon} />&nbsp; Dashboard</Link>
+        <Link to="/discover" className={path === '/discover' ? 'Links2' : 'Links1'} > <img alt="" src={DiscoverIcon} />&nbsp; Discover</Link>
+        <Link to="/chats" className={path === '/chats' ? 'Links2' : 'Links1'} > <img alt="" src={ChatsIconGrey} />&nbsp; Chats</Link>
       </div>
 
       <div style={{width: '85%', display: 'flex', flexDirection: 'column', margin: '2rem 0 1rem 0'}}>
-        <Link to='#' className='center ' style={{color: '#808080', fontWeight: '500' }} > <img alt="" src={HousesIcon} style={{width: '1.3rem', height: '1.3rem'}} />&nbsp; Houses</Link>
-        <div style={{display: 'flex', flexDirection: 'column', marginLeft: '3rem' }}>
-          <Link to="#" className='fontLight' >Turbonators</Link>
-          <Link to="#" className='fontLight' >Elipsers</Link>
-          <Link to="#" className='fontLight' >The Gigglers</Link>
+        <button onClick={()=>{setHouses(!houses)}} className={houses ? 'Links2' : 'Links1'} style={{ fontWeight: '500' }} > <img alt="" src={HousesIcon} style={{width: '1.3rem', height: '1.3rem'}} />&nbsp; Houses</button>
+        
+        <div style={{flexDirection: 'column', marginLeft: '3rem', display: `${houses ? 'flex' : 'none'}`}}>
+          <Link to="/houses/Turbonators" className='fontLight' >Turbonators</Link>
+          <Link to="/houses/Elipsers" className='fontLight' >Elipsers</Link>
+          <Link to="/houses/The Gigglers" className='fontLight' >The Gigglers</Link>
         </div>
-        <Link to="#" className='center ' style={{color: '#808080', fontWeight: '500', marginTop: '1rem' }} > <img alt="" src={ProjectsIcon} style={{width: '1.3rem', height: '1.3rem'}} />&nbsp; Projects</Link>
-        <div style={{display: 'flex', flexDirection: 'column', marginLeft: '3rem' }}>
+        
+        <button onClick={() => {setProjects(!projects)}} className={projects ? 'Links2' : 'Links1'} style={{ fontWeight: '500', marginTop: '0.5rem' }} > <img alt="" src={ProjectsIcon} style={{width: '1.3rem', height: '1.3rem'}} />&nbsp; Projects</button>
+        <div style={{flexDirection: 'column', marginLeft: '3rem', display: `${projects ? 'flex' : 'none'}` }}>
           <Link to="#" className='fontLight' >The Saas Project</Link>
           <Link to="#" className='fontLight' >Microsoft Challenge</Link>
           <Link to="#" className='fontLight' >Android Task Multitasking</Link>
         </div>
       </div>
 
-      <Link to="#" className='center font500' > <img alt="" src={InvestmentsIcon} />&nbsp; Investments</Link>
+      <Link to="/investments" className='center font500' > <img alt="" src={InvestmentsIcon} />&nbsp; Investments</Link>
       <Link to="#" className='center font500' > <img alt="" src={CollabRequestIcon} />&nbsp; Collab Requests</Link>
       <hr style={{margin: '0.4rem 0'}} />
       <Link to="#" className='center font500' > <img alt="" src={ChatsIconBlack} />&nbsp; Chats</Link>

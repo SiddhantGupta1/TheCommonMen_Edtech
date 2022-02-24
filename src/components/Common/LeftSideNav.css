@@ -5,10 +5,9 @@
 }
 .fontLight{
     color: rgba(0, 0, 0, 0.5);
-    font-weight: 300;
     font-size: 13px;
     padding: 0.2rem;
-    line-height: 1.25;
+    line-height: 1.4;
 }
 .font500{
     width: 85%;
@@ -35,8 +34,11 @@
     color: #808080;
     font-size: 15px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
 }
-.Links1 img{
+:is(.Links1, .Links2) img{
     width: 20px;
     height: 20px;
 }
@@ -46,6 +48,7 @@
     font-size: 15px;
     font-weight: 500;
     background-color: #55ACEE;
-    width: 20px;
-    height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
 }

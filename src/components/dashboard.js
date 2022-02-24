@@ -87,7 +87,7 @@ const Dashboard = () => {
         
         <header>
           <img alt="" src={SearchIcon} style={{position: 'absolute', margin: '10px 0 0 5px'}} />
-          <input placeholder='Search topics, etc.' id='inputApp' />
+          <input placeholder='Search topics, etc.' />
 
           <div>
             <button style={{background: 'rgba(255, 255, 255, 0.7)', borderRadius: '10px', padding: '0.5rem', marginRight: '1.5rem'}} ><img alt="" src={NotificationsIcon} style={{width: '30px'}} /></button>

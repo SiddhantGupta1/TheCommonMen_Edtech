@@ -1,0 +1,20 @@
+.DiscoverSection{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0rem;
+}
+
+.DiscoverSection input{
+    width: 36rem;
+    height: 3rem;
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    font-size: 0.9rem;
+}
+
+.discoverCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1rem 0rem;
+}
