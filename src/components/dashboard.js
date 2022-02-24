@@ -71,6 +71,22 @@ const Dashboard = () => {
       users: [User1, User2, User3, User1, User2 ],
       edited: 'Last Edited 12h ago',
     },
+    {
+      bg: BGimg1,
+      project: 'Android Task Multitasking',
+      house: 'Turbonators',
+      progress: '90',
+      users: [User1, User2, User3, User2, User3, User2 ],
+      edited: 'Last Edited 12h ago',
+    },
+    {
+      bg: BGimg1,
+      project: 'Saas Project',
+      house: 'Elipsers',
+      progress: '20',
+      users: [User1, User2, User3, User1, User2 ],
+      edited: 'Last Edited 12h ago',
+    },
     
   ]
 
@@ -112,11 +128,11 @@ const Dashboard = () => {
 
         <div style={{display: 'flex', flexWrap: 'wrap'}}>
             {cards.map((e,index) => (
-              <div key={index} style={{width: '14.5rem', margin: '1.5rem 2.4rem' }}>
+              <div key={index} style={{width: '13.5rem', margin: '1.5rem 1.3rem 1.5rem 0' }}>
 
-              <div style={{position: 'relative', height: '6.9rem' }}>
-                <img alt="" src={e.bg} style={{position: 'absolute', width: '14.55rem', borderRadius: '10px 10px 0 0'}} />
-                <div style={{position: 'relative', height: '6.9rem', padding: '2.5rem 0 0 1rem', borderRadius: '10px 10px 0 0', background: 'linear-gradient(180deg, rgba(3, 3, 3, 0) -12.5%, #000000 115.3%),url()'}} >
+              <div style={{position: 'relative' }}>
+                <img alt="" src={e.bg} style={{position: 'absolute', width: '13.55rem', borderRadius: '10px 10px 0 0'}} />
+                <div style={{position: 'relative', height: '6.3rem', padding: '2.5rem 0 0 1rem', borderRadius: '10px 10px 0 0', background: 'linear-gradient(180deg, rgba(3, 3, 3, 0) -12.5%, #000000 115.3%),url()'}} >
                   <p style={{color: 'white', fontSize: '1rem'}} >{e.house}</p>
                   <p style={{color: 'white', fontWeight: '500', fontSize: '1.6rem'}} >{e.project.split(" ")[0]}</p>
                 </div>
