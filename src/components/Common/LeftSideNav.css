@@ -1,0 +1,51 @@
+.center{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+.fontLight{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+    font-size: 13px;
+    padding: 0.2rem;
+    line-height: 1.25;
+}
+.font500{
+    width: 85%;
+    color: #808080;
+    font-weight: 500;
+}
+
+.LeftSideNav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    min-height: 100vh;
+}
+
+.LeftSideNav hr{
+    width: 85%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.15);
+    border: 0;
+}
+
+.Links1{
+    color: #808080;
+    font-size: 15px;
+    font-weight: 500;
+}
+.Links1 img{
+    width: 20px;
+    height: 20px;
+}
+.Links2{
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #55ACEE;
+    width: 20px;
+    height: 20px;
+}

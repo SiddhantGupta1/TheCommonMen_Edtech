@@ -1,0 +1,114 @@
+.DashboardSection{
+    padding: 3rem 2rem 1rem 2rem;
+    min-height: 100vh;
+}
+
+.DashboardSection header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.DashboardSection input{
+    width: 26rem;
+    height: 3rem;
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    font-size: 0.9rem;
+}
+.DashboardSection input::placeholder{
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.house-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    box-shadow: 24;
+    width: 30rem;
+    height: 40rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageInput::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.imageInput{
+    width: 90%;
+    height: 8rem;
+    background: #ECECEC;
+    border-radius: 10px;
+}
+.imageInput::before{
+    content: 'Add a cover picture';
+    display: flex;
+    height: 8rem;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    opacity: 0.4;
+}
+.nameInput{
+    margin: 2rem;
+    width: 90%;
+    height: 2.5rem;
+    padding: 0 1rem;
+    background: #ECECEC;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+.descInput{
+    padding: 0.7rem;
+    background: #ECECEC;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    max-width: 90%;
+    min-width: 90%;
+    min-height: 10rem;
+    max-height: 15rem;
+}
+.imageInputSubmit{
+    padding: 1rem 2rem;
+    background: #2E2E2E;
+    border-radius: 8px;
+    color: white;
+    margin-top: 1rem;
+}
+
+
+
+
+.UpcomingEventsSection{
+    display: flex;
+    flex-direction: column !important;
+    padding: 2rem 0 0 1.5rem;
+    background: white;
+    min-height: 100vh;
+}
+
+.UpcomingEventsSection img{
+    width: 19px;
+    height: 23px;
+}
+
+.event{
+    display: flex;
+    margin: 0.6rem 0;
+}
+.event section{
+    width: 3.5rem;
+    height: 3.7rem;
+    padding-top: 0.75rem;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    background: #0E0E0E;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+}
