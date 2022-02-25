@@ -1,0 +1,58 @@
+.invertedArrow{
+    transform: rotate(180deg);
+    transition: .5s;
+}
+.arrow{
+    transform: rotate(0);
+    transition: .5s;
+}
+
+.display{
+    display: block;
+}
+.NOdisplay{
+    display: none;
+}
+
+.discussion{
+    animation: diss 2s;
+    display: flex;
+    height: 50.4vh;
+    padding: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-58.7vh);
+}
+@keyframes diss {
+    from{
+        position: relative;
+        z-index: -1;
+        transform: translateY(0);
+    }
+    to{
+        position: relative;
+        z-index: 1;
+        transform: translateY(-58.7vh);
+    }
+}
+
+.NoDiscussion{
+    animation: OPPdiss 2s;
+    height: 0;
+    transform: translateY(0);
+}
+@keyframes OPPdiss {
+    from{
+        height: 50.4vh;
+        position: relative;
+        z-index: 1;
+        transform: translateY(-58.7vh);
+    }
+    to{
+        height: 0;
+        position: relative;
+        z-index: -1;
+        transform: translateY(0);
+    }
+}

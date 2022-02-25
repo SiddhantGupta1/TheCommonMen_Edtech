@@ -54,10 +54,10 @@ const Houses = () => {
               <div key={index} style={{position: 'relative'}} >
                 <img alt="" src={HouseBG} style={{width: '100%', height: '19.5rem', position: 'absolute'}} />
                 <div style={{position: 'relative', width: '100%', height: '19.5rem', paddingTop: '4.5rem', }}>
-                  <div style={{display: 'flex', justifyContent: 'center', }} >
+                  <div style={{display: 'flex', justifyContent: 'center', padding: '0 4rem' }} >
                     <img alt="" src={SearchIcon} style={{marginRight: '-38px', zIndex:'2', position: 'relative' }} />
-                    <input placeholder='Search topics, etc.' style={{width: '70%', height: '3rem', borderRadius: '8px', paddingLeft: '3rem', background: 'rgba(250, 250, 250, 0.5)'}} />
-                    <button onClick={handleOpen} style={{background: 'white', padding: '0.5rem 1rem', borderRadius: '20px', marginLeft: '2rem'}}>+ Post a Collab</button>
+                    <input placeholder='Search topics, etc.' style={{width: '73%', height: '3rem', borderRadius: '8px', paddingLeft: '3rem', background: 'rgba(250, 250, 250, 0.5)'}} />
+                    <button onClick={handleOpen} style={{background: 'white', padding: '0.5rem 1rem', borderRadius: '20px', marginLeft: '11rem'}}>+ Post a Collab</button>
                   </div>
 
                   <Modal open={open} onClose={handleClose}>
@@ -80,8 +80,9 @@ const Houses = () => {
                   <br /><br /><br /><br />
                   <p style={{fontSize: '3rem', color: 'white', fontWeight: '500', marginLeft: '6rem'}}>{e.name}</p>
                 </div>
+
                 <Grid item container xs={12}>
-                  <Grid item xs={8} style={{padding: '2rem 0.5rem 0 3rem'}}>
+                  <Grid item xs={8} style={{padding: '2rem 1.5rem 0 3rem'}}>
                     <p style={{fontSize: '1.1rem', color: 'rgba(0, 0, 0, 0.5)', fontWeight: '500'}}>This House is all about</p>
                     <p style={{fontSize: '1.1rem', marginTop: '0.5rem', textAlign: 'justify' }}>{e.desc}</p> <br />
                     
