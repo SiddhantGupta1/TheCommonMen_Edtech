@@ -15,16 +15,15 @@
 }
 
 .discussion{
-    animation: diss 2s;
+    animation: discussion 1s;
     display: flex;
-    height: 50.4vh;
     padding: 5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateY(-58.7vh);
+    transform: translateY(-69vh);
 }
-@keyframes diss {
+@keyframes discussion {
     from{
         position: relative;
         z-index: -1;
@@ -33,18 +32,17 @@
     to{
         position: relative;
         z-index: 1;
-        transform: translateY(-58.7vh);
+        transform: translateY(-69vh);
     }
 }
 
 .NoDiscussion{
-    animation: OPPdiss 2s;
-    height: 0;
+    animation: discussionOpp 1s;
     transform: translateY(0);
 }
-@keyframes OPPdiss {
+@keyframes discussionOpp {
     from{
-        height: 50.4vh;
+        height: 60vh;
         position: relative;
         z-index: 1;
         transform: translateY(-58.7vh);

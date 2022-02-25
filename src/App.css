@@ -35,3 +35,8 @@ body{
 .HousesCards::-webkit-scrollbar{
   display: none;
 }
+
+/* Projects.js */
+.projectCards::-webkit-scrollbar{
+  display: none;
+}

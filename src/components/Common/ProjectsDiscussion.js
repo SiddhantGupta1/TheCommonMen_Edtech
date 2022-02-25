@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
 import './ProjectsDiscussion.css';
-import Arrow from '../../assets/Arrow.svg'
+import Arrow from '../../assets/Arrow.svg';
+import CardBG from '../../assets/CardBG.svg';
 import { Link } from 'react-router-dom';
 
 const ProjectsDiscussion = () => {
 
-  const [discussion, setDiscussion] = useState(true)
+  const [discussion, setDiscussion] = useState(false)
+
+  const myHands = ['New File', 'New Task', 'Add Notes', 'Post a Collab', 'New Event', 'Discussion Room', 'Add House Member', 'Wave at Investors', 'Edit House Details']
 
   return (
     <div style={{height: '60vh'}} >
 
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '50vh', background: 'red'}} >
-          <h1>My cards👐</h1>
-      
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}} >
+          <h1 style={{marginTop: '1rem'}} >My Hands✊</h1>
+          <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', margin: '1rem 0', }}>
+            {myHands.map((e,index) => (
+              <div key={index} style={{display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '10px'}}>
+                <img alt="" src={CardBG} style={{width: '100px', height: '100px', borderRadius: '8px'}} />
+                <p style={{position: 'absolute', textAlign: 'center', color: 'white', width: '100px'}}>{e}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
       <div style={{background: '#111111', width: '100%', height:'4rem', padding: '0 4rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative', zIndex: '1'}}>
         <p style={{color: 'white', fontSize: '1rem' }} >Discussion Room</p>
-        <button onClick={() => {setDiscussion(!discussion)}} ><img alt="" src={Arrow} className={discussion ? 'invertedArrow' : 'arrow'} /></button>
+        <button onClick={() => {setDiscussion(!discussion)}} style={{width: '25px', height: '25px' }} ><img alt="" src={Arrow} className={discussion ? 'invertedArrow' : 'arrow'} /></button>
       </div>
 
         <div className={discussion ? 'discussion' : 'NoDiscussion'} style={{background: 'white'}}>

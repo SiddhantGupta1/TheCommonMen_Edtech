@@ -54,7 +54,7 @@
     padding: 0.5rem 1rem;
 }
 
-.houseNamesBG, .houseNamesBG-active{
+.houseNamesBG, .houseNamesBG-active, .productNamesBG, .productNamesBG-active{
     color: rgba(0, 0, 0, 0.5);
     font-size: 13px;
     padding: 0.2rem;
@@ -63,7 +63,7 @@
     margin: 2px 0; 
 }
 
-.houseNamesBG-active{
+.houseNamesBG-active, .productNamesBG-active{
     background: rgba(85, 172, 238, 0.3);
     border-radius: 7px;    
 }

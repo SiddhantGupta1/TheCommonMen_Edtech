@@ -22,7 +22,7 @@ import { useParams } from 'react-router-dom';
 const LeftSideNav = () => {
 
   const houseNames = ['Turbonators', 'The Gigglers', 'Inspiers']
-
+  const projectNames = ['The Saas Project', 'Microsoft Challenge', 'Android Task Monitoring']
   const path = window.location.pathname
   
   const Params = useParams()
@@ -50,9 +50,9 @@ const LeftSideNav = () => {
         
         <button onClick={() => {setIsProjects(!isprojects)}} className={isprojects ? 'Links2' : 'Links1'} style={{ fontWeight: '500' }} > <img alt="" src={ProjectsIcon} style={{width: '1.3rem', height: '1.3rem'}} />&nbsp; Projects</button>
         <div style={{flexDirection: 'column', marginLeft: '3rem', display: `${isprojects ? 'flex' : 'none'}` }}>
-          <Link to="#" className='fontLight' >The Saas Project</Link>
-          <Link to="#" className='fontLight' >Microsoft Challenge</Link>
-          <Link to="#" className='fontLight' >Android Task Multitasking</Link>
+          {projectNames.map((e,index) => (
+            <Link key={index} to={`/projects/${e}`} className={pathQuery === e ? 'productNamesBG-active' : 'productNamesBG'} >{e}</Link>
+          ))}
         </div>
       </div>
 
