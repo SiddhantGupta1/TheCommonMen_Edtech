@@ -78,3 +78,5 @@ const Home = () => {
 }
 
 export default Home
+
+/*Login Register Home */
