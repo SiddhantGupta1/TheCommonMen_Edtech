@@ -87,7 +87,7 @@ const Houses = () => {
                     <p style={{fontSize: '1.1rem', marginTop: '0.5rem', textAlign: 'justify' }}>{e.desc}</p> <br />
                     
                     <p style={{fontSize: '1.1rem', color: 'rgba(0, 0, 0, 0.5)', fontWeight: '500', marginBottom: '0.5rem'}}>Family Members ({e.members.length})</p>
-                    <div className="HousesCards" style={{display: 'flex', overflow: 'auto' }}>
+                    <div className="NoScrollBar" style={{display: 'flex', overflow: 'auto' }}>
                       {e.members.map((e,index) => (
                         <div key={index} style={{minWidth: '100px', marginRight: '15px', position: 'relative' }} >
                           <img alt="" src={HouseIMG} style={{position: 'absolute', width: '100px', height: '100px', borderRadius: '8px'}} />

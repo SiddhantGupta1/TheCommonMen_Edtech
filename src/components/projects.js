@@ -5,18 +5,58 @@ import LeftSideNav from './Common/LeftSideNav';
 import { Link, useParams } from 'react-router-dom';
 import ProjectsDiscussion from './Common/ProjectsDiscussion';
 import SearchIcon from '../assets/SearchIcon.svg';
-import HouseBG from '../assets/HouseBG.svg';
+import ProjectsBG from '../assets/ProjectsBG.svg';
+import Overview from './Projects/Overview';
+import Tasks from './Projects/Tasks';
+import Files from './Projects/Files';
+import Notes from './Projects/Notes';
+import Collab from './Projects/Collab';
+import Recordings from './Projects/Recordings';
+import Investments from './Projects/Investments';
 
-const Projects = () => {
+
+const Projects = () => 
+{
 
   const params = useParams()
   const query = params.query
+  const hash = window.location.hash.slice(1)
   const projects = [
     {
       id: 36,
       name: 'The Saas Project',
       progress: 60,
       desc: 'Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Turbonators. Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Turbonators. ',
+      task: [
+        {
+          taskDate: '03 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '08 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '18 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '20 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '01 Mar',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '11 Mar',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '15 Mar',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+      ],
       achievers: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
       investors: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark", "Natasha", "Eric Jones", "Tony Stark"],
     },
@@ -25,6 +65,32 @@ const Projects = () => {
       name: 'Microsoft Challenge',
       progress: 40,
       desc: 'Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Gigglers. Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Gigglers. ',
+      task: [
+        {
+          taskDate: '02 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '09 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '18 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '20 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '01 Mar',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '11 Mar',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+      ],
       achievers: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
       investors: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark"],
     },
@@ -33,13 +99,42 @@ const Projects = () => {
       name: 'Android Task Monitoring',
       progress: 25,
       desc: 'Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Inspiers. Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Inspiers.',
+      task: [
+        {
+          taskDate: '04 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '04 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '18 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '20 Feb',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '01 Mar',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '11 Mar',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+        {
+          taskDate: '16 Mar',
+          taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+      ],
       achievers: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
       investors: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark"],
     },
   ]
 
   const myHands = ['Overview', 'Tasks', 'Files', 'Notes', 'Collab', 'Recordings', 'Investments']
-
 
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
@@ -57,11 +152,11 @@ const Projects = () => {
           {
             return(
               <div key={index} style={{position: 'relative'}} >
-                <img alt="" src={HouseBG} style={{width: '100%', height: '19.5rem', position: 'absolute'}} />
+                <img alt="" src={ProjectsBG} style={{width: '100%', height: '19.5rem', position: 'absolute'}} />
                 <div style={{position: 'relative', width: '100%', height: '19.5rem', paddingTop: '4.5rem', marginBottom: '2rem' }}>
                   <div style={{display: 'flex', justifyContent: 'center', padding: '0 4rem' }} >
                     <img alt="" src={SearchIcon} style={{marginRight: '-38px', zIndex:'2', position: 'relative' }} />
-                    <input placeholder='Search topics, etc.' style={{width: '73%', height: '3rem', borderRadius: '8px', paddingLeft: '3rem', background: 'rgba(250, 250, 250, 0.5)'}} />
+                    <input className="ProjectsSearchBarPlaceholder" placeholder='Search topics, etc.' style={{width: '73%', height: '3rem', borderRadius: '8px', paddingLeft: '3rem', background: 'rgba(250, 250, 250, 0.5)', color: 'white'}} />
                     <button onClick={handleOpen} style={{background: 'white', padding: '0.5rem 1rem', borderRadius: '20px', marginLeft: '11rem'}}>+ Collab Notice</button>
                   </div>
 
@@ -96,12 +191,24 @@ const Projects = () => {
 
                   <Grid item container xs={12} style={{marginTop: '1.6rem'}} >
 
-                    <Grid item xs={8} style={{padding: '2rem 2rem 1rem 4rem'}} >
-                      <div className='projectCards' style={{display: 'flex', overflow: 'auto'}}>
+                    <Grid item xs={8} style={{padding: '2rem 2rem 4rem 4rem'}} >
+                      <div className='NoScrollBar' style={{display: 'flex', overflow: 'auto', marginBottom: '2rem'}}>
                         {myHands.map((e,index) => (
-                          <p key={index} style={{margin: '0 2rem'}} >{e}</p>
+                          <div key={index} style={{marginRight: '4.5rem', display: 'block'}}>
+                          <Link to={`#${e}`} key={index} className={e === hash ? 'hash-active' : 'hash-inactive'} >{e}</Link>
+                          <hr className={e === hash ? 'hashUnderLine-active' : 'hashUnderLine-inactive'} />
+                          </div>
                         ))}
                       </div>
+                      
+                      {hash === 'Overview' ? <Overview projects={projects} /> : <></> }
+                      {hash === 'Tasks' ? <Tasks projects={projects} /> : <></> }
+                      {hash === 'Files' ? <Files projects={projects} /> : <></> }
+                      {hash === 'Notes' ? <Notes projects={projects} /> : <></> }
+                      {hash === 'Collab' ? <Collab projects={projects} /> : <></> }
+                      {hash === 'Recordings' ? <Recordings projects={projects} /> : <></> }
+                      {hash === 'Investments' ? <Investments projects={projects} /> : <></> }
+
                     </Grid>
 
 

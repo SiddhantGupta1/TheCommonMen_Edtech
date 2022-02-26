@@ -9,7 +9,11 @@ const Chats = () => {
       <Grid item xs={2} style={{background: 'white'}} >
         <LeftSideNav />
       </Grid>
-      <Grid item xs={10}>
+
+      <Grid item xs={5}>
+        Chats
+      </Grid>
+      <Grid item xs={5}>
         Chats
       </Grid>
     </Grid>

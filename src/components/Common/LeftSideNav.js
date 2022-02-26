@@ -51,7 +51,7 @@ const LeftSideNav = () => {
         <button onClick={() => {setIsProjects(!isprojects)}} className={isprojects ? 'Links2' : 'Links1'} style={{ fontWeight: '500' }} > <img alt="" src={ProjectsIcon} style={{width: '1.3rem', height: '1.3rem'}} />&nbsp; Projects</button>
         <div style={{flexDirection: 'column', marginLeft: '3rem', display: `${isprojects ? 'flex' : 'none'}` }}>
           {projectNames.map((e,index) => (
-            <Link key={index} to={`/projects/${e}`} className={pathQuery === e ? 'productNamesBG-active' : 'productNamesBG'} >{e}</Link>
+            <Link key={index} to={`/projects/${e}#Overview`} className={pathQuery === e ? 'productNamesBG-active' : 'productNamesBG'} >{e}</Link>
           ))}
         </div>
       </div>

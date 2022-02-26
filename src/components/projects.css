@@ -1,0 +1,26 @@
+.hashUnderLine-active{
+    margin: 0 5px;
+    height: 2px;
+    background: black;
+    border: 0; 
+    border-radius: 5px;
+    display: block;
+}
+.hashUnderLine-inactive{
+    display: none;
+}
+
+.hash-active{
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(0, 0, 0);
+}
+.hash-inactive{
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.ProjectsSearchBarPlaceholder::placeholder{
+    color: white;
+}
