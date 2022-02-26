@@ -13,7 +13,9 @@ import Notes from './Projects/Notes';
 import Collab from './Projects/Collab';
 import Recordings from './Projects/Recordings';
 import Investments from './Projects/Investments';
-
+import xmlLogo from '../assets/xmlLogo.svg';
+import photoshopLogo from '../assets/photoshopLogo.svg';
+import figmaLogo from '../assets/figmaLogo.svg';
 
 const Projects = () => 
 {
@@ -57,6 +59,40 @@ const Projects = () =>
           taskProgress: 'Phase 2 Completion & telecast it.',
         },
       ],
+      files: [
+        {
+          fileImg: xmlLogo,
+          fileName: 'Updated Finance List'
+        },
+        {
+          fileImg: photoshopLogo,
+          fileName: 'Wireframe of the Homescre.'
+        },
+        {
+          fileImg: figmaLogo,
+          fileName: 'Cart Design'
+        },
+        {
+          fileImg: photoshopLogo,
+          fileName: 'logo edit'
+        },
+        {
+          fileImg: xmlLogo,
+          fileName: 'New Price Figures'
+        },
+        {
+          fileImg: figmaLogo,
+          fileName: 'Logo Edit'
+        },
+        {
+          fileImg: photoshopLogo,
+          fileName: 'Updated Finance List'
+        },
+        {
+          fileImg: xmlLogo,
+          fileName: 'Updated Finance List'
+        },
+      ],
       achievers: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
       investors: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark", "Natasha", "Eric Jones", "Tony Stark"],
     },
@@ -89,6 +125,40 @@ const Projects = () =>
         {
           taskDate: '11 Mar',
           taskProgress: 'Phase 2 Completion & telecast it.',
+        },
+      ],
+      files: [
+        {
+          fileImg: photoshopLogo,
+          fileName: 'logo edit'
+        },
+        {
+          fileImg: xmlLogo,
+          fileName: 'Updated Finance List'
+        },
+        {
+          fileImg: xmlLogo,
+          fileName: 'New Price Figures'
+        },
+        {
+          fileImg: photoshopLogo,
+          fileName: 'Wireframe of the Homescre.'
+        },
+        {
+          fileImg: figmaLogo,
+          fileName: 'Cart Design'
+        },
+        {
+          fileImg: figmaLogo,
+          fileName: 'Logo Edit'
+        },
+        {
+          fileImg: photoshopLogo,
+          fileName: 'Updated Finance List'
+        },
+        {
+          fileImg: xmlLogo,
+          fileName: 'Updated Finance List'
         },
       ],
       achievers: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
@@ -128,6 +198,40 @@ const Projects = () =>
           taskDate: '16 Mar',
           taskProgress: 'Phase 2 Completion & telecast it.',
         },
+      ],
+      files: [
+        {
+          fileImg: photoshopLogo,
+          fileName: 'Wireframe of the Homescre.'
+        },
+        {
+          fileImg: xmlLogo,
+          fileName: 'Updated Finance List'
+        },
+        {
+          fileImg: figmaLogo,
+          fileName: 'Logo Edit'
+        },
+        {
+          fileImg: figmaLogo,
+          fileName: 'Cart Design'
+        },
+        {
+          fileImg: photoshopLogo,
+          fileName: 'logo edit'
+        },
+        {
+          fileImg: xmlLogo,
+          fileName: 'New Price Figures'
+        },
+        {
+          fileImg: photoshopLogo,
+          fileName: 'Web Designs'
+        },
+        {
+          fileImg: xmlLogo,
+          fileName: 'Updated Finance List'
+        }
       ],
       achievers: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
       investors: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark"],

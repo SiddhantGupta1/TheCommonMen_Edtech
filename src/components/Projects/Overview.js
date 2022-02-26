@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link, useParams } from 'react-router-dom';
-import CardBG from '../../assets/CardBG.svg'
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import CardBG from '../../assets/CardBG.svg';
 
 
 const Overview = ({projects}) => {
-    console.log(projects)
+
     const params = useParams()
     const query = params.query
     
