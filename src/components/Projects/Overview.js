@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import CardBG from '../../assets/CardBG.svg';
+import CardBG from '../../assets/CardBG.jpg';
 
 
 const Overview = ({projects}) => {

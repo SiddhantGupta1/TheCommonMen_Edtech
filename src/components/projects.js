@@ -5,13 +5,12 @@ import LeftSideNav from './Common/LeftSideNav';
 import { Link, useParams } from 'react-router-dom';
 import ProjectsDiscussion from './Common/ProjectsDiscussion';
 import SearchIcon from '../assets/SearchIcon.svg';
-import ProjectsBG from '../assets/ProjectsBG.svg';
+import ProjectsBG from '../assets/ProjectsBG.jpg';
 import Overview from './Projects/Overview';
 import Tasks from './Projects/Tasks';
 import Files from './Projects/Files';
 import Notes from './Projects/Notes';
 import Collab from './Projects/Collab';
-import Recordings from './Projects/Recordings';
 import Investments from './Projects/Investments';
 import xmlLogo from '../assets/xmlLogo.svg';
 import photoshopLogo from '../assets/photoshopLogo.svg';
@@ -23,7 +22,7 @@ const Projects = () =>
   const params = useParams()
   const query = params.query
   const hash = window.location.hash.slice(1)
-  const projects = [
+  const [projects, setProjects] = useState([
     {
       id: 36,
       name: 'The Saas Project',
@@ -58,6 +57,10 @@ const Projects = () =>
           taskDate: '15 Mar',
           taskProgress: 'Phase 2 Completion & telecast it.',
         },
+      ],
+      notes: [
+        'This project needs a new way of implementing API integration.',
+        'We need to figure out a way to download the images and contacts.'
       ],
       files: [
         {
@@ -127,6 +130,11 @@ const Projects = () =>
           taskProgress: 'Phase 2 Completion & telecast it.',
         },
       ],
+      notes: [
+        'This project needs a new way of implementing API integration.',
+        'We need to figure out a way to download the images and contacts.'
+      ],
+
       files: [
         {
           fileImg: photoshopLogo,
@@ -199,6 +207,12 @@ const Projects = () =>
           taskProgress: 'Phase 2 Completion & telecast it.',
         },
       ],
+      notes: [
+        'We need to figure out a way to download the images and contacts.', 
+        'This project needs a new way of implementing API integration.', 
+        'We need to figure out a way to download the images and contacts.'
+      ],
+
       files: [
         {
           fileImg: photoshopLogo,
@@ -236,9 +250,9 @@ const Projects = () =>
       achievers: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
       investors: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark"],
     },
-  ]
+  ])
 
-  const myHands = ['Overview', 'Tasks', 'Files', 'Notes', 'Collab', 'Recordings', 'Investments']
+  const myHands = ['Overview', 'Tasks', 'Files', 'Notes', 'Collab', 'Investments']
 
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
@@ -256,7 +270,7 @@ const Projects = () =>
           {
             return(
               <div key={index} style={{position: 'relative'}} >
-                <img alt="" src={ProjectsBG} style={{width: '100%', height: '19.5rem', position: 'absolute'}} />
+                <img alt="" src={ProjectsBG} style={{width: '100%', position: 'absolute', aspectRatio: '4.11'}} />
                 <div style={{position: 'relative', width: '100%', height: '19.5rem', paddingTop: '4.5rem', marginBottom: '2rem' }}>
                   <div style={{display: 'flex', justifyContent: 'center', padding: '0 4rem' }} >
                     <img alt="" src={SearchIcon} style={{marginRight: '-38px', zIndex:'2', position: 'relative' }} />
@@ -308,9 +322,8 @@ const Projects = () =>
                       {hash === 'Overview' ? <Overview projects={projects} /> : <></> }
                       {hash === 'Tasks' ? <Tasks projects={projects} /> : <></> }
                       {hash === 'Files' ? <Files projects={projects} /> : <></> }
-                      {hash === 'Notes' ? <Notes projects={projects} /> : <></> }
+                      {hash === 'Notes' ? <Notes projects={projects} setProjects={setProjects} /> : <></> }
                       {hash === 'Collab' ? <Collab projects={projects} /> : <></> }
-                      {hash === 'Recordings' ? <Recordings projects={projects} /> : <></> }
                       {hash === 'Investments' ? <Investments projects={projects} /> : <></> }
 
                     </Grid>

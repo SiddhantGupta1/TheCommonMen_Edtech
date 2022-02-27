@@ -15,7 +15,7 @@ import ChatsIconBlack from '../../assets/ChatsIconBlack.svg';
 import EventsIcon from '../../assets/EventsIcon.svg';
 import NotificationsIcon from '../../assets/NotificationsIcon.svg';
 import SettingsIcon from '../../assets/SettingsIcon.svg';
-import UserIcon from '../../assets/UserIcon.svg'
+import UserIcon from '../../assets/UserIcon.jpg'
 import { useParams } from 'react-router-dom';
 
 

@@ -2,10 +2,9 @@ import React,{useState} from 'react';
 import { Grid, Modal, Fade} from '@mui/material';
 import LeftSideNav from './Common/LeftSideNav';
 import { useParams } from 'react-router-dom';
-import HouseBG from '../assets/HouseBG.svg';
+import HouseBG from '../assets/HouseBG.jpg';
 import SearchIcon from '../assets/SearchIcon.svg';
-import HouseIMG from '../assets/HouseIMG.svg';
-import HouseIMG1 from '../assets/HouseIMG1.svg';
+import CardBG from '../assets/CardBG.jpg';
 import ProjectsDiscussion from './Common/ProjectsDiscussion';
 
 const Houses = () => {
@@ -90,7 +89,7 @@ const Houses = () => {
                     <div className="NoScrollBar" style={{display: 'flex', overflow: 'auto' }}>
                       {e.members.map((e,index) => (
                         <div key={index} style={{minWidth: '100px', marginRight: '15px', position: 'relative' }} >
-                          <img alt="" src={HouseIMG} style={{position: 'absolute', width: '100px', height: '100px', borderRadius: '8px'}} />
+                          <img alt="" src={CardBG} style={{position: 'absolute', width: '100px', height: '100px', borderRadius: '8px'}} />
                           <p style={{position: 'relative', color: 'white', padding: '3.7rem 0.5rem', fontSize: '13px'}}>{e}</p>
                         </div>
                        ))}
@@ -100,7 +99,7 @@ const Houses = () => {
                     <div className="HousesCards" style={{display: 'flex', overflow: 'auto' }}>
                       {e.projects.map((e,index) => (
                         <div key={index} style={{minWidth: '100px', marginRight: '15px', position: 'relative' }} >
-                          <img alt="" src={HouseIMG1} style={{position: 'absolute', width: '100px', height: '100px', borderRadius: '8px'}} />
+                          <img alt="" src={CardBG} style={{position: 'absolute', width: '100px', height: '100px', borderRadius: '8px'}} />
                           <p style={{position: 'relative', color: 'white', padding: '3.7rem 0.5rem', fontSize: '13px'}}>{e}</p>
                         </div>
                        ))}
