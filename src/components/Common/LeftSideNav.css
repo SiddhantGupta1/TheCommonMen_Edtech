@@ -68,3 +68,8 @@
     background: rgba(85, 172, 238, 0.3);
     border-radius: 7px;    
 }
+
+.NavIconsSize{
+    width: 1rem;
+    height: 1rem;
+}

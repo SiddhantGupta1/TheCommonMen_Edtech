@@ -3,10 +3,14 @@ import User2 from '../../assets/User2.svg';
 import User3 from '../../assets/User3.svg';
 import Invest1 from '../../assets/Invest1.jpg';
 import Invest2 from '../../assets/Invest2.jpg';
-import BGimg1 from '../../assets/BGimg1.svg';
+import BGimg1 from '../../assets/BGimg1.jpg';
 import RandomUser1 from '../../assets/RandomUser1.svg';
 import RandomUser2 from '../../assets/RandomUser2.svg';
 import RandomUser3 from '../../assets/RandomUser3.svg';
+import CardBG from '../../assets/CardBG.jpg';
+import CardBG1 from '../../assets/CardBG1.jpg';
+import CardBG2 from '../../assets/CardBG2.jpg';
+import CardBG3 from '../../assets/CardBG3.jpg';
 
 
 export const houses = [
@@ -337,4 +341,43 @@ export const cards = [
         edited: 'Last Edited 12h ago',
       },
     
+]
+
+export const myHands = [
+  { 
+    name:'New File',
+    img: CardBG
+  },
+  {
+    name: 'New Task',
+    img: CardBG1
+  },
+  {
+    name: 'Add Notes',
+    img: CardBG2
+  },
+  {
+    name: 'Post a Collab',
+    img: CardBG3
+  },
+  {
+    name: 'New Event',
+    img: CardBG1
+  },
+  {
+    name: 'Discussion Room',
+    img: CardBG
+  },
+  {
+    name: 'Add House Member',
+    img: CardBG2
+  },
+  {
+    name: 'Wave at Investors',
+    img: CardBG3
+  },
+  {
+    name: 'Edit House Details',
+    img: CardBG1
+  },
 ]

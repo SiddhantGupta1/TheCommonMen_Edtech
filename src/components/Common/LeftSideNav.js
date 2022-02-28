@@ -60,12 +60,12 @@ const LeftSideNav = () => {
         <button onClick={() => alert('Collab Requests is not yet available.')} className='Links1' > <img alt="" src={CollabRequestIcon} />&nbsp; Collab Requests</button>
       
       <hr style={{margin: '0.4rem 0', width: '95%'}} />
-      <button onClick={() => alert('Events is not yet available.')} className='center font500' > <img alt="" src={EventsIcon} />&nbsp; Events</button>
-      <button onClick={() => alert('Notifications is not yet available.')} className='center font500' > <img alt="" src={NotificationsIcon} />&nbsp; Notifications</button>
-      <button onClick={() => alert('Settings is not yet available.')} className='center font500' > <img alt="" src={SettingsIcon} />&nbsp; Settings</button>
+      <button onClick={() => alert('Events is not yet available.')} className='center font500' > <img alt="" className="NavIconsSize" src={EventsIcon} />&nbsp; Events</button>
+      <button onClick={() => alert('Notifications is not yet available.')} className='center font500' > <img alt="" className="NavIconsSize" src={NotificationsIcon} />&nbsp; Notifications</button>
+      <button onClick={() => alert('Settings is not yet available.')} className='center font500' > <img alt="" className="NavIconsSize" src={SettingsIcon} />&nbsp; Settings</button>
       </div>
       <div style={{width: '80%', display: 'flex', alignItems: 'center', margin: '2rem 0 1rem 0'}}>
-        <img alt="" src={UserIcon} />
+        <img alt="" src={UserIcon} style={{width: '2.5rem', height: '2.5rem'}} />
         &nbsp;&nbsp;Vinci di Ui
       </div>
 

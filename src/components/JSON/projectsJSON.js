@@ -2,7 +2,7 @@ import xmlLogo from '../../assets/xmlLogo.svg';
 import photoshopLogo from '../../assets/photoshopLogo.svg';
 import figmaLogo from '../../assets/figmaLogo.svg';
 
-  export const projects = [
+export const projects = [
     {
       id: 36,
       name: 'Saas Project',
@@ -230,4 +230,4 @@ import figmaLogo from '../../assets/figmaLogo.svg';
       achievers: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
       investors: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark"],
     },
-  ]
+]

@@ -1,5 +1,4 @@
 import React from 'react'
-import './Investments.css'
 import { Grid } from '@mui/material';
 import LeftSideNav from './Common/LeftSideNav';
 import InvestmentsBG from '../assets/InvestmentsBG.jpg';
@@ -9,7 +8,12 @@ import {invest} from './JSON/JSON'
 const Investments = () => {
 
   return (
-    <Grid item container xs={12} >
+    <>
+    <div style={{position: 'fixed', zIndex: '10', top: '0%', width: '100%', height: '3.5rem', fontSize: '0.9rem', background: '#FFCC4D', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+      <p>This is where you can invest or get funded for your projects. This is all under development. Stay Connected 😁✨</p>
+    </div>
+    
+      <Grid item container xs={12} style={{marginTop: '3.5rem'}} >
         <Grid item xs={2} style={{background: 'white', position: 'relative'}} >
             <div style={{position: 'fixed', width: '16rem'}} >
                 <LeftSideNav />
@@ -32,7 +36,7 @@ const Investments = () => {
                             <img alt="" src={e.img} style={{position: 'absolute', borderRadius: '8px', width: '8rem', height: '10rem'}} />
                             <div style={{position: 'relative', margin: ' 0.7rem 0.6rem'}}>
                                 <div style={{background: 'white', marginBottom: '2rem', display: 'flex', justifyContent: 'center', borderRadius: '10px', width: '2rem'}}>
-                                    <img alt="" src={members} style={{width: '15px'}} />
+                                    <img alt="" src={members} style={{width: '15px', height: '20px'}} />
                                     <p style={{fontSize: '13px'}} >{e.members}</p>
                                 </div>
                                 <p style={{fontWeight: '500', fontSize: '1rem', color: 'white', height: '3rem'}} >{e.name}</p>
@@ -43,7 +47,7 @@ const Investments = () => {
                     ))}
                 </div>
 
-                <div style={{width: '100%', background: '#222222', height: '9rem', marginTop: '2rem', borderRadius: '8px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                <div style={{width: '100%', background: '#222222', height: '9rem', margin: '2rem 0', borderRadius: '8px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                         <p style={{color: 'white', marginBottom: '10px', fontWeight: '600', fontSize: '0.9rem'}} >Become a Partner with us!! What Say?</p>
                         <p style={{color: 'white', marginBottom: '10px', fontWeight: '400', fontSize: '0.7rem', width: '11rem', textAlign: 'center'}} >Whatever you want to Invest, Let’s make it 50%</p>
                         <p style={{color: 'white', marginBottom: '4px', fontWeight: '600', fontSize: '0.8rem'}} >You pay 50%, We pay 50%</p>
@@ -54,6 +58,7 @@ const Investments = () => {
         </Grid>
     
     </Grid>
+    </>
   )
 }
 

@@ -18,7 +18,12 @@ const Houses = () => {
   const handleClose = () => setOpen(false)
 
   return (
-    <Grid item container xs={12}>
+    <>
+    <div style={{position: 'fixed', zIndex: '10', top: '0%', width: '100%', height: '3.5rem', fontSize: '0.9rem', background: '#FFCC4D', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+      <p>Welcome to the House. You have your team, your projects all listed. Explore the Discussion room. It's active✨</p>
+    </div>
+    
+    <Grid item container xs={12} style={{marginTop: '3.5rem'}} >
       <Grid item xs={2} style={{background: 'white', position: 'relative'}} >
         <div style={{position: 'fixed', width: '15.5rem'}} >
           <LeftSideNav />
@@ -34,7 +39,7 @@ const Houses = () => {
                 <img alt="" src={HouseBG} style={{width: '100%', height: '19.5rem', position: 'absolute'}} />
                 <div style={{position: 'relative', width: '100%', height: '19.5rem', paddingTop: '4.5rem', }}>
                   <div style={{display: 'flex', justifyContent: 'center', padding: '0 4rem' }} >
-                    <img alt="" src={SearchIcon} style={{marginRight: '-38px', zIndex:'2', position: 'relative' }} />
+                    <img alt="" src={SearchIcon} style={{marginRight: '-38px', zIndex:'2', width: '1.7rem', height: '3rem', position: 'relative' }} />
                     <input placeholder='Search topics, etc.' style={{width: '73%', height: '3rem', borderRadius: '8px', paddingLeft: '3rem', background: 'rgba(250, 250, 250, 0.5)'}} />
                     <button onClick={handleOpen} style={{background: 'white', padding: '0.5rem 1rem', borderRadius: '20px', marginLeft: '11rem'}}>+ Post a Collab</button>
                   </div>
@@ -100,6 +105,7 @@ const Houses = () => {
 
       </Grid>
     </Grid>
+    </>
   )
 }
 

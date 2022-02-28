@@ -1,8 +1,12 @@
 .invertedArrow{
+    width: 1.2rem;
+    height: 1.2rem;
     transform: rotate(180deg);
     transition: .5s;
 }
 .arrow{
+    width: 1.2rem;
+    height: 1.2rem;
     transform: rotate(0);
     transition: .5s;
 }

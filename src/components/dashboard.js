@@ -15,16 +15,16 @@ const Dashboard = () => {
 
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
-  const handleClose = () => setOpen(false)
+  const handleClose = () => setOpen(false)  
 
 
   return (
     <>
-      <div style={{position: 'fixed', zIndex: '10', top: '0%', width: '100%', height: '4rem', background: '#FFCC4D', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <p>This is the Dashboard Page, You can use the Nav bar in the left to navigate through houses & projects.  </p>
+      <div style={{position: 'fixed', zIndex: '10', top: '0%', width: '100%', height: '3.5rem', background: '#FFCC4D', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <p>Click on Projects listed, scroll down, You'll find Houses. Use the Navigation bar to switch through projects/houses. And Hit New House button and you'll get a popup.</p>
       </div>
     
-    <Grid item container xs={12} style={{marginTop: '4rem'}} >
+    <Grid item container xs={12} style={{marginTop: '3.5rem'}} >
       
       <Grid item xs={2} style={{background: 'white', position: 'relative'}} >
         <div style={{position: 'fixed', width: '16rem'}} >
@@ -39,8 +39,8 @@ const Dashboard = () => {
           <input placeholder='Search topics, etc.' />
 
           <div>
-            <button style={{background: 'rgba(255, 255, 255, 0.7)', borderRadius: '10px', padding: '0.5rem', marginRight: '1.5rem'}} ><img alt="" src={NotificationsIcon} style={{width: '30px'}} /></button>
-            <button onClick={handleOpen} style={{background: '#FFF9C6', borderRadius: '10px', padding: '0.6rem 0.5rem', fontSize: '18px', fontWeight: '500'}}> + New House</button>
+            <button name="Notifications" style={{background: 'rgba(255, 255, 255, 0.7)', borderRadius: '10px', padding: '0.5rem', marginRight: '1.5rem'}} ><img alt="" src={NotificationsIcon} style={{width: '30px', height: '25px'}} /></button>
+            <button onClick={handleOpen} style={{background: '#FFF9C6', borderRadius: '10px', padding: '0.8rem 0.5rem 0.5rem 0.5rem', fontSize: '18px', fontWeight: '500'}}> + New House</button>
           </div>
         </header>
 
@@ -56,8 +56,8 @@ const Dashboard = () => {
           </Fade>
         </Modal>
 
-        <p style={{fontSize: '2.5rem', fontWeight: '500', margin: '3rem 0 2rem 0'}}><span style={{fontWeight: '300'}}>Holaa!! </span>Vinci di Ui &nbsp;<img alt="" src={CollabRequestIcon} style={{width: '1.8rem'}} /></p>
-        <p style={{fontSize: '1.5rem', color: 'rgba(0, 0, 0, 0.7)', marginBottom: '1rem'}} >Recently Opened Projects &nbsp;<img alt="" src={ProjectsIcon} style={{width: '1.2rem'}} /></p>
+        <p style={{fontSize: '2.5rem', fontWeight: '500', margin: '3rem 0 2rem 0'}}><span style={{fontWeight: '300'}}>Holaa!! </span>Vinci di Ui &nbsp;<img alt="" src={CollabRequestIcon} style={{width: '1.8rem', height: '1.8rem'}} /></p>
+        <p style={{fontSize: '1.5rem', color: 'rgba(0, 0, 0, 0.7)', marginBottom: '1rem'}} >Recently Opened Projects &nbsp;<img alt="" src={ProjectsIcon} style={{width: '1.2rem', height: '1.2rem'}} /></p>
 
         <div style={{display: 'flex', flexWrap: 'wrap'}}>
             {cards.map((e,index) => (
@@ -96,7 +96,7 @@ const Dashboard = () => {
             ))}
         </div>
         
-        <p style={{fontSize: '1.5rem', color: 'rgba(0, 0, 0, 0.7)', margin: '2rem 0 1.5rem 0'}} >My Houses &nbsp; <img alt="" src={HousesIcon} style={{width: '1.6rem'}} /></p>
+        <p style={{fontSize: '1.5rem', color: 'rgba(0, 0, 0, 0.7)', margin: '2rem 0 1.5rem 0'}} >My Houses &nbsp; <img alt="" src={HousesIcon} style={{width: '1.6rem', height: '1.6rem'}} /></p>
         <div style={{display: 'flex'}} >
         {houses.map((e,index) => (
           <Link key={index} to={`/houses/${e.name}`} style={{width: '12rem', height: '10rem', display: 'flex', alignItems: 'flex-end'}} >

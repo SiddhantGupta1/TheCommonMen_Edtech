@@ -24,6 +24,22 @@
     color: white;
 }
 
+.update-progress-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    box-shadow: 24;
+    width: 50rem;
+    height: 22rem;
+    background-color: white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* Files.js */
 .projectsFileInput::-webkit-file-upload-button{
