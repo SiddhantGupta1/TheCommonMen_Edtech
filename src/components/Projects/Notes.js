@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import { useParams } from 'react-router-dom';
 import { Modal, Fade} from '@mui/material';
 
-const Notes = ({projects, setProjects}) => {
+const Notes = ({ projects }) => {
 
   const params = useParams()
   const query = params.query

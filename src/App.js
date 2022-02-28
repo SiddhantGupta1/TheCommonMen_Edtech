@@ -6,6 +6,7 @@ import Houses from './components/houses';
 import Home from './components/home';
 import Discover from './components/Discover';
 import Chats from './components/Chats';
+import Investments from './components/Investments';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/projects/:query" element={<Projects />} />
           <Route path="/discover" element={<Discover />} />
           <Route path="/chats" element={<Chats />} />
+          <Route path="/investments" element={<Investments />} />
         </Routes>
       </div>
     </Router>

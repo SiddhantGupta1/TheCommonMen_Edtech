@@ -11,7 +11,6 @@ import HousesIcon from '../../assets/HousesIcon.svg';
 import ProjectsIcon from '../../assets/ProjectsIcon.svg';
 import InvestmentsIcon from '../../assets/InvestmentsIcon.svg';
 import CollabRequestIcon from '../../assets/CollabRequestIcon.svg';
-import ChatsIconBlack from '../../assets/ChatsIconBlack.svg';
 import EventsIcon from '../../assets/EventsIcon.svg';
 import NotificationsIcon from '../../assets/NotificationsIcon.svg';
 import SettingsIcon from '../../assets/SettingsIcon.svg';
@@ -23,6 +22,7 @@ const LeftSideNav = () => {
 
   const houseNames = ['Turbonators', 'The Gigglers', 'Inspiers']
   const projectNames = ['The Saas Project', 'Microsoft Challenge', 'Android Task Monitoring']
+
   const path = window.location.pathname
   
   const Params = useParams()
@@ -54,12 +54,12 @@ const LeftSideNav = () => {
             <Link key={index} to={`/projects/${e}#Overview`} className={pathQuery === e ? 'productNamesBG-active' : 'productNamesBG'} >{e}</Link>
           ))}
         </div>
-      </div>
+      
 
-      <Link to="#" style={{marginTop: '1rem'}} className='center font500' > <img alt="" src={InvestmentsIcon} />&nbsp; Investments</Link>
-      <Link to="#" className='center font500' > <img alt="" src={CollabRequestIcon} />&nbsp; Collab Requests</Link>
+        <Link to="/investments" style={{marginTop: '1rem'}} className={path === '/investments' ? 'Links2' : 'Links1'} > <img alt="" src={InvestmentsIcon} />&nbsp; Investments</Link>
+        <Link to="collab" className={path === '/collab' ? 'Links2' : 'Links1'} > <img alt="" src={CollabRequestIcon} />&nbsp; Collab Requests</Link>
+      </div>
       <hr style={{margin: '0.4rem 0'}} />
-      <Link to="#" className='center font500' > <img alt="" src={ChatsIconBlack} />&nbsp; Chats</Link>
       <Link to="#" className='center font500' > <img alt="" src={EventsIcon} />&nbsp; Events</Link>
       <Link to="#" className='center font500' > <img alt="" src={NotificationsIcon} />&nbsp; Notifications</Link>
       <Link to="#" className='center font500' > <img alt="" src={SettingsIcon} />&nbsp; Settings</Link>

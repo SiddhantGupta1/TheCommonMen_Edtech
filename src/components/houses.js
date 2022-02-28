@@ -6,34 +6,12 @@ import HouseBG from '../assets/HouseBG.jpg';
 import SearchIcon from '../assets/SearchIcon.svg';
 import CardBG from '../assets/CardBG.jpg';
 import ProjectsDiscussion from './Common/ProjectsDiscussion';
+import {houses} from './JSON/JSON';
 
 const Houses = () => {
   
   const params = useParams()
   const query = params.query
-  const houses = [
-    {
-      id: 36,
-      name: 'Turbonators',
-      desc: 'Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Turbonators. ',
-      projects: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
-      members: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark", "Natasha", "Eric Jones", "Tony Stark"],
-    },
-    {
-      id: 37,
-      name: 'The Gigglers',
-      desc: 'Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Gigglers.',
-      projects: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
-      members: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark"],
-    },
-    {
-      id: 38,
-      name: 'Inspiers',
-      desc: 'Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Inspiers.',
-      projects: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
-      members: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark"],
-    },
-  ]
 
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)

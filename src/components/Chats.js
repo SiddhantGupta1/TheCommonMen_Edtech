@@ -3,81 +3,10 @@ import './Chats.css'
 import {Grid} from '@mui/material'
 import LeftSideNav from './Common/LeftSideNav';
 import User1 from '../assets/User1.svg';
-import User2 from '../assets/User2.svg';
-import User3 from '../assets/User3.svg';
 import { Link } from 'react-router-dom';
+import {messages, chats} from './JSON/JSON'
 
 const Chats = () => {
-
-  const messages = [
-    {
-      userImg: User1,
-      userName: 'Sid',
-      userText: 'Guys all set!? I’ve created the group, Eric Are you in for the game?',
-      time: '17',
-    },
-    {
-      userImg: User2,
-      userName: 'Gena',
-      userText: 'Yesss!! we are all set to go...',
-      time: '7',
-    },
-    {
-      userImg: User3,
-      userName: 'Eric',
-      userText: 'Yes!! Sid, I’ve updated the expenses in the discussion board, You can check now.',
-      time: '2',
-    },
-    {
-      userImg: User1,
-      userName: 'Sid',
-      userText: 'Guys all set!? I’ve created the group, Eric Are you in for the game?',
-      time: '17',
-    },
-    {
-      userImg: User2,
-      userName: 'Gena',
-      userText: 'Yesss!! we are all set to go...',
-      time: '7',
-    },
-    {
-      userImg: User3,
-      userName: 'Eric',
-      userText: 'Yes!! Sid, I’ve updated the expenses in the discussion board, You can check now.',
-      time: '2',
-    },
-    {
-      userImg: User1,
-      userName: 'Sid',
-      userText: 'Guys all set!? I’ve created the group, Eric Are you in for the game?',
-      time: '17',
-    },
-    {
-      userImg: User2,
-      userName: 'Gena',
-      userText: 'Yesss!! we are all set to go...',
-      time: '7',
-    },
-  ]
-
-  const chats = [
-    {
-      name: 'The Sophomores',
-      label: 'Some title Yada Yada Yada'
-    },
-    {
-      name: 'Sid',
-      label: 'Some title Daaya Daaya '
-    },
-    {
-      name: 'Harey Jenkins',
-      label: 'Some title Yada Yada Ya'
-    },
-    {
-      name: 'The Sophomores',
-      label: 'Some title Yada Yad'
-    },
-  ]
 
   return (
     <Grid item container xs={12}>
