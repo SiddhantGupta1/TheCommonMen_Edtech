@@ -3,6 +3,11 @@ import User2 from '../../assets/User2.svg';
 import User3 from '../../assets/User3.svg';
 import Invest1 from '../../assets/Invest1.jpg';
 import Invest2 from '../../assets/Invest2.jpg';
+import BGimg1 from '../../assets/BGimg1.svg';
+import RandomUser1 from '../../assets/RandomUser1.svg';
+import RandomUser2 from '../../assets/RandomUser2.svg';
+import RandomUser3 from '../../assets/RandomUser3.svg';
+
 
 export const houses = [
   {
@@ -10,21 +15,120 @@ export const houses = [
     name: 'Turbonators',
     desc: 'Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Turbonators. ',
     projects: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
-    members: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark", "Natasha", "Eric Jones", "Tony Stark"],
+    members: [
+      {
+        name: "Eric James",
+        img: RandomUser1
+      },
+      {
+        name: "Brian Lara",
+        img: RandomUser2
+      },
+      {
+        name: "Natasha", 
+        img: RandomUser3
+      },
+      {
+        name: "Eric Jones",
+        img: RandomUser2
+      },
+      {
+        name: "Tony Stark",
+        img: RandomUser1
+      },
+      {
+        name: "Natasha",
+        img: RandomUser3
+      },
+      {
+        name: "Eric Jones",
+        img: RandomUser2
+      },
+      { 
+        name: "Tony Stark",
+        img: RandomUser1
+      },
+    ]
   },
   {
     id: 37,
     name: 'The Gigglers',
     desc: 'Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Gigglers.',
     projects: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
-    members: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark"],
+    members: [
+      {
+        name: "Eric James",
+        img: RandomUser1
+      },
+      {
+        name: "Brian Lara",
+        img: RandomUser2
+      },
+      {
+        name: "Natasha", 
+        img: RandomUser3
+      },
+      {
+        name: "Eric Jones",
+        img: RandomUser2
+      },
+      {
+        name: "Tony Stark",
+        img: RandomUser1
+      },
+      {
+        name: "Natasha",
+        img: RandomUser3
+      },
+      {
+        name: "Eric Jones",
+        img: RandomUser2
+      },
+      { 
+        name: "Tony Stark",
+        img: RandomUser1
+      },
+    ]
   },
   {
     id: 38,
     name: 'Inspiers',
     desc: 'Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Inspiers.',
     projects: ["Design Heist", "Design Heist", "Design Heist", "Design Heist",],
-    members: ["Eric James", "Brian Lara", "Natasha", "Eric Jones", "Tony Stark"],
+    members: [
+      {
+        name: "Eric James",
+        img: RandomUser1
+      },
+      {
+        name: "Brian Lara",
+        img: RandomUser2
+      },
+      {
+        name: "Natasha", 
+        img: RandomUser3
+      },
+      {
+        name: "Eric Jones",
+        img: RandomUser2
+      },
+      {
+        name: "Tony Stark",
+        img: RandomUser1
+      },
+      {
+        name: "Natasha",
+        img: RandomUser3
+      },
+      {
+        name: "Eric Jones",
+        img: RandomUser2
+      },
+      { 
+        name: "Tony Stark",
+        img: RandomUser1
+      },
+    ]
   },
 ]
 
@@ -33,19 +137,19 @@ export const messages = [
       "userImg": User1,
       "userName": "Sid",
       "userText": "Guys all set!? I’ve created the group, Eric Are you in for the game?",
-      "time": "17"
+      "time": "28"
     },
     {
       "userImg": User2,
       "userName": "Gena",
       "userText": "Yesss!! we are all set to go...",
-      "time": "7"
+      "time": "26"
     },
     {
       "userImg": User3,
       "userName": "Eric",
       "userText": "Yes!! Sid, I’ve updated the expenses in the discussion board, You can check now.",
-      "time": "2"
+      "time": "20"
     },
     {
       "userImg": User1,
@@ -57,25 +161,25 @@ export const messages = [
       "userImg": User2,
       "userName": "Gena",
       "userText": "Yesss!! we are all set to go...",
-      "time": "7"
+      "time": "15"
     },
     {
       "userImg": User3,
       "userName": "Eric",
       "userText": "Yes!! Sid, I’ve updated the expenses in the discussion board, You can check now.",
-      "time": "2"
+      "time": "12"
     },
     {
       "userImg": User1,
       "userName": "Sid",
       "userText": "Guys all set!? I’ve created the group, Eric Are you in for the game?",
-      "time": "17"
+      "time": "10"
     },
     {
       "userImg": User2,
       "userName": "Gena",
       "userText": "Yesss!! we are all set to go...",
-      "time": "7"
+      "time": "5"
     }
 ]
 
@@ -159,4 +263,78 @@ export const invest = [
       price: '500',
       members: 2
   },
+]
+
+export const cards = [
+    {
+      bg: BGimg1,
+      project: 'Saas Project',
+      house: 'The Gigglers',
+      progress: '60',
+      edited: 'Last Edited 12h ago',
+    },
+    {
+      bg: BGimg1,
+      project: 'Microsoft Challenge',
+      house: 'Elipsers',
+      progress: '40',
+      edited: 'Last Edited 12h ago',
+    },
+    {
+      bg: BGimg1,
+      project: 'Android Task Multitasking',
+      house: 'Turbonators',
+      progress: '90',
+      edited: 'Last Edited 12h ago',
+    },
+    {
+      bg: BGimg1,
+      project: 'Saas Project',
+      house: 'Elipsers',
+      progress: '20',
+      edited: 'Last Edited 12h ago',
+    },
+    {
+        bg: BGimg1,
+        project: 'Microsoft Challenge',
+        house: 'Elipsers',
+        progress: '50',
+        edited: 'Last Edited 12h ago',
+      },
+      {
+        bg: BGimg1,
+        project: 'Vidya Vahini',
+        house: 'Turbonators',
+        progress: '90',
+        edited: 'Last Edited 12h ago',
+      },
+      {
+        bg: BGimg1,
+        project: 'Saas Project',
+        house: 'Elipsers',
+        progress: '10',
+        edited: 'Last Edited 12h ago',
+      },
+      {
+        bg: BGimg1,
+        project: 'Design Heist',
+        house: 'Elipsers',
+        progress: '100',
+        edited: 'Last Edited 12h ago',
+      },
+      {
+        bg: BGimg1,
+        project: 'Android Task Multitasking',
+        house: 'Turbonators',
+        progress: '45',
+        edited: 'Last Edited 12h ago',
+      },
+      {
+        bg: BGimg1,
+        project: 'Saas Project',
+        house: 'Elipsers',
+        progress: '30',
+        edited: 'Last Edited 12h ago',
+      },
+    
 ]

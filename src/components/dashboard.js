@@ -8,97 +8,30 @@ import NotificationsIcon from '../assets/NotificationsIcon.svg';
 import CollabRequestIcon from '../assets/CollabRequestIcon.svg';
 import HousesIcon from '../assets/HousesIcon.svg';
 import ProjectsIcon from '../assets/ProjectsIcon.svg';
-import BGimg1 from '../assets/BGimg1.svg';
-import User1 from '../assets/User1.svg';
-import User2 from '../assets/User2.svg';
-import User3 from '../assets/User3.svg';
-import House1 from '../assets/House1.svg';
-import House2 from '../assets/House2.svg';
-import House3 from '../assets/House3.svg';
+import { Link } from 'react-router-dom';
+import {events, cards, houses} from './JSON/dashboardJSON';
 
 const Dashboard = () => {
-
-  const events = [
-    {
-      date: '8',
-      name: 'Saas Project',
-      script: 'Phase 1',
-      desc: 'Build & Present the Project',
-    },
-    {
-      date: '15',
-      name: 'Elipsers',
-      script: 'Phase 1',
-      desc: 'Build & Present the Project',
-    },
-    {
-      date: '29',
-      name: 'Saas Project',
-      script: 'Phase 2',
-      desc: 'Build & Present the Project',
-    },
-  ]
-  const cards = [
-    {
-      bg: BGimg1,
-      project: 'Saas Project',
-      house: 'The Gigglers',
-      progress: '60',
-      users: [User1, User2, User3, User2 ],
-      edited: 'Last Edited 12h ago',
-    },
-    {
-      bg: BGimg1,
-      project: 'Microsoft Challenge',
-      house: 'Elipsers',
-      progress: '40',
-      users: [User1, User2, User3, User2, User1, User2 ],
-      edited: 'Last Edited 12h ago',
-    },
-    {
-      bg: BGimg1,
-      project: 'Android Task Multitasking',
-      house: 'Turbonators',
-      progress: '90',
-      users: [User1, User2, User3, User2, User3, User2 ],
-      edited: 'Last Edited 12h ago',
-    },
-    {
-      bg: BGimg1,
-      project: 'Saas Project',
-      house: 'Elipsers',
-      progress: '20',
-      users: [User1, User2, User3, User1, User2 ],
-      edited: 'Last Edited 12h ago',
-    },
-    {
-      bg: BGimg1,
-      project: 'Android Task Multitasking',
-      house: 'Turbonators',
-      progress: '90',
-      users: [User1, User2, User3, User2, User3, User2 ],
-      edited: 'Last Edited 12h ago',
-    },
-    {
-      bg: BGimg1,
-      project: 'Saas Project',
-      house: 'Elipsers',
-      progress: '20',
-      users: [User1, User2, User3, User1, User2 ],
-      edited: 'Last Edited 12h ago',
-    },
-    
-  ]
 
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
 
+
   return (
-    <Grid item container xs={12}>
-      <Grid item xs={2} style={{background: 'white'}} >
-        <LeftSideNav />
+    <>
+      <div style={{position: 'fixed', zIndex: '10', top: '0%', width: '100%', height: '4rem', background: '#FFCC4D', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <p>This is the Dashboard Page, You can use the Nav bar in the left to navigate through houses & projects.  </p>
+      </div>
+    
+    <Grid item container xs={12} style={{marginTop: '4rem'}} >
+      
+      <Grid item xs={2} style={{background: 'white', position: 'relative'}} >
+        <div style={{position: 'fixed', width: '16rem'}} >
+          <LeftSideNav />
+        </div>
       </Grid>
+      
       <Grid item xs={8} className='DashboardSection' >
         
         <header>
@@ -128,7 +61,7 @@ const Dashboard = () => {
 
         <div style={{display: 'flex', flexWrap: 'wrap'}}>
             {cards.map((e,index) => (
-              <div key={index} style={{width: '13.5rem', margin: '1.5rem 1.3rem 1.5rem 0' }}>
+              <Link to={`/projects/${e.project}#Overview`} key={index} style={{width: '13.5rem', margin: '1.5rem 1.3rem 1.5rem 0' }}>
 
               <div style={{position: 'relative' }}>
                 <img alt="" src={e.bg} style={{position: 'absolute', width: '13.55rem', borderRadius: '10px 10px 0 0'}} />
@@ -159,15 +92,19 @@ const Dashboard = () => {
               
               </div>
               
-            </div>
+            </Link>
             ))}
         </div>
         
         <p style={{fontSize: '1.5rem', color: 'rgba(0, 0, 0, 0.7)', margin: '2rem 0 1.5rem 0'}} >My Houses &nbsp; <img alt="" src={HousesIcon} style={{width: '1.6rem'}} /></p>
-        <img alt="" src={House1} style={{width: '10rem', height: '11rem'}} /> &emsp;&emsp;
-        <img alt="" src={House2} style={{width: '10rem', height: '11rem'}} /> &emsp;&emsp;
-        <img alt="" src={House3} style={{width: '10rem', height: '11rem'}} />
-
+        <div style={{display: 'flex'}} >
+        {houses.map((e,index) => (
+          <Link key={index} to={`/houses/${e.name}`} style={{width: '12rem', height: '10rem', display: 'flex', alignItems: 'flex-end'}} >
+            <img alt="" src={e.img} style={{width: '10rem', borderRadius: '8px', position: 'absolute'}} />
+            <p style={{position: 'relative', color: 'white', fontSize: '1.2rem', fontWeight: '500', margin: '0 0 0.8rem 1rem'}} >{e.name}</p> &emsp;&emsp;
+          </Link>
+        ))}
+        </div>
       </Grid>
       <Grid item xs={2} className='UpcomingEventsSection'>
         
@@ -187,7 +124,9 @@ const Dashboard = () => {
         ))}
         
       </Grid>
+
     </Grid>
+    </>
   )
 }
 

@@ -5,7 +5,7 @@ import figmaLogo from '../../assets/figmaLogo.svg';
   export const projects = [
     {
       id: 36,
-      name: 'The Saas Project',
+      name: 'Saas Project',
       progress: 60,
       desc: 'Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Turbonators. Remote work isn’t just about doing your job from a different location; it’s also about maintaining availability to your colleagues throughout the whole working day. About Turbonators. ',
       task: [

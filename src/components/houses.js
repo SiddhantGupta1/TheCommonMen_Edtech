@@ -19,8 +19,10 @@ const Houses = () => {
 
   return (
     <Grid item container xs={12}>
-      <Grid item xs={2} style={{background: 'white'}} >
-        <LeftSideNav />
+      <Grid item xs={2} style={{background: 'white', position: 'relative'}} >
+        <div style={{position: 'fixed', width: '15.5rem'}} >
+          <LeftSideNav />
+        </div>
       </Grid>
       <Grid item xs={10}>
 
@@ -67,8 +69,8 @@ const Houses = () => {
                     <div className="NoScrollBar" style={{display: 'flex', overflow: 'auto' }}>
                       {e.members.map((e,index) => (
                         <div key={index} style={{minWidth: '100px', marginRight: '15px', position: 'relative' }} >
-                          <img alt="" src={CardBG} style={{position: 'absolute', width: '100px', height: '100px', borderRadius: '8px'}} />
-                          <p style={{position: 'relative', color: 'white', padding: '3.7rem 0.5rem', fontSize: '13px'}}>{e}</p>
+                          <img alt="" src={e.img} style={{position: 'absolute', width: '100px', height: '100px', borderRadius: '8px'}} />
+                          <p style={{position: 'relative', color: 'white', padding: '3.7rem 0.5rem', fontSize: '13px'}}>{e.name}</p>
                         </div>
                        ))}
                     </div>

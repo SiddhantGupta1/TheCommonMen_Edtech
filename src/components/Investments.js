@@ -10,8 +10,10 @@ const Investments = () => {
 
   return (
     <Grid item container xs={12} >
-        <Grid item xs={2}>
-            <LeftSideNav />
+        <Grid item xs={2} style={{background: 'white', position: 'relative'}} >
+            <div style={{position: 'fixed', width: '16rem'}} >
+                <LeftSideNav />
+            </div>
         </Grid>
 
         <Grid item xs={10}>
@@ -23,7 +25,7 @@ const Investments = () => {
                 </div>
             </div>
             <div style={{width: '100%', padding: '0 4rem'}}>
-                <p style={{color: 'rgba(0, 0, 0, 0.7)', marginBottom: '1rem'}} >Top Recommended Collabs</p>
+                <p style={{color: 'rgba(0, 0, 0, 0.7)', marginBottom: '1rem'}} >Top Recommended Projects</p>
                 <div className='NoScrollBar' style={{display: 'flex', width: '100%', overflow: 'auto'}} >
                     {invest.map((e,index) => (
                         <div key={index} style={{position: 'relative', minWidth: '8rem', marginRight: '3rem'}}>

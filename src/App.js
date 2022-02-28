@@ -7,6 +7,7 @@ import Home from './components/home';
 import Discover from './components/Discover';
 import Chats from './components/Chats';
 import Investments from './components/Investments';
+import NotAvailable from './components/NotAvailable';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/discover" element={<Discover />} />
           <Route path="/chats" element={<Chats />} />
           <Route path="/investments" element={<Investments />} />
+          <Route path="/NotAvailable" element={<NotAvailable />} />
         </Routes>
       </div>
     </Router>

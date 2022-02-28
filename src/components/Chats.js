@@ -9,12 +9,14 @@ import {messages, chats} from './JSON/JSON'
 const Chats = () => {
 
   return (
-    <Grid item container xs={12}>
-      <Grid item xs={2} style={{background: 'white'}} >
-        <LeftSideNav />
+    <div style={{display: 'flex'}} >
+      <Grid item xs={2} style={{background: 'white', position: 'relative'}} >
+        <div style={{position: 'fixed', width: '16rem'}} >
+          <LeftSideNav />
+        </div>
       </Grid>
 
-      <Grid item xs={3} style={{background: '#292929', width: '100%', minHeight: '100vh'}} >
+      <Grid item xs={3} className="NoScrollBar" style={{background: '#292929', width: '100%', maxHeight: '100vh', overflow: 'auto'}} >
         {chats.map((e,index) => (
           <Link to={`#${e.name}`} key={index} className="chatsHover" style={{display: 'flex', width: '100%', height: '5rem', padding: '1.5rem 1rem 2rem 2rem'}} >
               <img alt="" src={User1} style={{width: '45px', height: '45px', borderRadius: '50%', background: '#C4C4C4', marginRight: '0.7rem'}} />
@@ -26,7 +28,7 @@ const Chats = () => {
         ))}
       </Grid>
       
-      <Grid item xs={7} style={{background: '#1D1D1D', width: '100%', minHeight: '100vh', padding: '2rem 3rem'}} >
+      <Grid item xs={7} style={{background: '#1D1D1D', width: '100%', maxHeight: '100vh', padding: '2rem 3rem', overflow: 'auto'}} >
           
           {messages.map((e,index) => (
             <div key={index} style={{position: 'relative', marginBottom: '1.8rem'}}>
@@ -39,10 +41,10 @@ const Chats = () => {
             </div>
           ))}
           
-          <input placeholder='Message' style={{fontSize: '1rem', position: 'fixed', zIndex: '10', top: '90%', width: '52%', marginTop: '1.5rem', background: 'rgb(196, 196, 196)', padding: '0.6rem 1rem', borderRadius: '8px', color: 'black'}} />
+          <input placeholder='Message' style={{fontSize: '1rem', position: 'fixed', zIndex: '10', top: '89%', width: '52%', marginTop: '1.5rem', background: '#292929', padding: '1rem 1rem', borderRadius: '8px', color: 'white'}} />
 
       </Grid>
-    </Grid>
+    </div>
   )
 }
 

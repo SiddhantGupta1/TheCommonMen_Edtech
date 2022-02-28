@@ -3,9 +3,7 @@ import './ProjectsDiscussion.css';
 import Arrow from '../../assets/Arrow.svg';
 import CardBG from '../../assets/CardBG.jpg';
 import { Link } from 'react-router-dom';
-import User1 from '../../assets/User1.svg';
-import User2 from '../../assets/User2.svg';
-import User3 from '../../assets/User3.svg';
+import {messages} from '../JSON/JSON'
 
 const ProjectsDiscussion = () => {
 
@@ -13,32 +11,6 @@ const ProjectsDiscussion = () => {
 
   const [discussionType, setDiscussionType] = useState('chats')
 
-  const chats = [
-    {
-      userImg: User1,
-      userName: 'Sid',
-      userText: 'Guys all set!? I’ve created the group, Eric Are you in for the game?',
-      time: '17',
-    },
-    {
-      userImg: User2,
-      userName: 'Gena',
-      userText: 'Yesss!! we are all set to go...',
-      time: '7',
-    },
-    {
-      userImg: User3,
-      userName: 'Eric',
-      userText: 'Yes!! Sid, I’ve updated the expenses in the discussion board, You can check now.',
-      time: '2',
-    },
-    {
-      userImg: User3,
-      userName: 'Eric',
-      userText: 'Yes!! Sid, I’ve updated the expenses in the discussion board, You can check now.',
-      time: '2',
-    },
-  ]
 
   const myHands = ['New File', 'New Task', 'Add Notes', 'Post a Collab', 'New Event', 'Discussion Room', 'Add House Member', 'Wave at Investors', 'Edit House Details']
 
@@ -46,7 +18,7 @@ const ProjectsDiscussion = () => {
     <div style={{height: '60vh'}} >
 
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}} >
-          <h1 style={{marginTop: '1rem'}} >My Hands✊</h1>
+          <p style={{marginTop: '1rem', fontSize: '1.7rem', fontWeight: '600'}} >My Hand✊</p>
           <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', margin: '1rem 0', }}>
             {myHands.map((e,index) => (
               <div key={index} style={{display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '10px'}}>
@@ -69,12 +41,12 @@ const ProjectsDiscussion = () => {
             <button onClick={() => setDiscussionType('video')} className={discussionType === 'video' ? 'discussionActive' : 'discussionInactive'} >Video</button>
           </div>
           <div className={discussion ? 'display ChatDiscussion NoScrollBar' : 'NOdisplay'}  style={{display: `${discussionType === 'chats' ? 'flex' : 'none'}`, overflow: 'auto'}} >
-            {chats.map((e,index) => (
+            {messages.map((e,index) => (
               <div className={discussion ? 'display' : 'NOdisplay'} key={index} style={{position: 'relative'}} >
                 <div style={{display: 'flex', alignItems: 'center', marginTop: '1rem'}}>
                   <img alt="" src={e.userImg} style={{width: '40px', marginRight: '10px'}} />
                   <p style={{color: 'white', marginRight: '10px', fontSize: '1rem'}} >{e.userName}</p>
-                  <p style={{color: 'rgba(255, 255, 255, 0.3)', fontSize: '0.7rem'}} >{e.time}mins ago</p>
+                  <p style={{color: 'rgba(255, 255, 255, 0.3)', fontSize: '0.7rem'}} >{e.time}&nbsp;mins ago</p>
                 </div>
                 <p style={{marginLeft: '45px', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.85rem'}} >{e.userText}</p>
               </div>

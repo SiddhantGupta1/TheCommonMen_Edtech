@@ -21,7 +21,7 @@ import { useParams } from 'react-router-dom';
 const LeftSideNav = () => {
 
   const houseNames = ['Turbonators', 'The Gigglers', 'Inspiers']
-  const projectNames = ['The Saas Project', 'Microsoft Challenge', 'Android Task Monitoring']
+  const projectNames = ['Saas Project', 'Microsoft Challenge', 'Android Task Monitoring']
 
   const path = window.location.pathname
   
@@ -57,13 +57,13 @@ const LeftSideNav = () => {
       
 
         <Link to="/investments" style={{marginTop: '1rem'}} className={path === '/investments' ? 'Links2' : 'Links1'} > <img alt="" src={InvestmentsIcon} />&nbsp; Investments</Link>
-        <Link to="collab" className={path === '/collab' ? 'Links2' : 'Links1'} > <img alt="" src={CollabRequestIcon} />&nbsp; Collab Requests</Link>
+        <button onClick={() => alert('Collab Requests is not yet available.')} className='Links1' > <img alt="" src={CollabRequestIcon} />&nbsp; Collab Requests</button>
+      
+      <hr style={{margin: '0.4rem 0', width: '95%'}} />
+      <button onClick={() => alert('Events is not yet available.')} className='center font500' > <img alt="" src={EventsIcon} />&nbsp; Events</button>
+      <button onClick={() => alert('Notifications is not yet available.')} className='center font500' > <img alt="" src={NotificationsIcon} />&nbsp; Notifications</button>
+      <button onClick={() => alert('Settings is not yet available.')} className='center font500' > <img alt="" src={SettingsIcon} />&nbsp; Settings</button>
       </div>
-      <hr style={{margin: '0.4rem 0'}} />
-      <Link to="#" className='center font500' > <img alt="" src={EventsIcon} />&nbsp; Events</Link>
-      <Link to="#" className='center font500' > <img alt="" src={NotificationsIcon} />&nbsp; Notifications</Link>
-      <Link to="#" className='center font500' > <img alt="" src={SettingsIcon} />&nbsp; Settings</Link>
-
       <div style={{width: '80%', display: 'flex', alignItems: 'center', margin: '2rem 0 1rem 0'}}>
         <img alt="" src={UserIcon} />
         &nbsp;&nbsp;Vinci di Ui
